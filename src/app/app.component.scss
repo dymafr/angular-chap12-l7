@@ -1,0 +1,28 @@
+.form-group {
+  max-width: 500px;
+  label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  input {
+    padding: 8px;
+    &.ng-untouched {
+      background-color: green;
+    }
+    &.ng-pristine {
+      border: 1px solid green;
+    }
+    &.ng-dirty.ng-invalid {
+      background-color: red;
+    }
+    &.ng-dirty {
+      border: 1px solid red;
+    }
+  }
+  margin-bottom: 10px;
+}
+
+.error {
+  padding: 8px;
+  color: var(--accent);
+}

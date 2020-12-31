@@ -1,0 +1,59 @@
+<hr />
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="d-flex flex-column form-group">
+      <label>Prénom et nom</label>
+      <input
+        formControlName="name"
+        type="text"
+        name="name"
+        placeholder="prénom nom"
+      />
+    </div>
+    <div *ngIf="erreursForm.name" class="error">
+        {{ erreursForm.name }}
+    </div>
+    <div class="d-flex flex-column form-group">
+      <label>Email</label>
+      <input
+        formControlName="email"
+        type="email"
+        name="email"
+        placeholder="adresse email"
+      />
+    </div>
+    <div *ngIf="erreursForm.email" class="error">
+        {{ erreursForm.email }}
+    </div>
+    <div class="d-flex flex-column form-group">
+      <label>Confirmation email</label>
+      <input
+        formControlName="confirmEmail"
+        type="email"
+        name="confirm"
+        placeholder="confirmaton adresse email"
+      />
+    </div>
+    <div *ngIf="erreursForm.confirmEmail" class="error">
+        {{ erreursForm.confirmEmail }}
+    </div>
+    <div *ngIf="erreursForm.form" class="error">
+        {{ erreursForm.form }}
+    </div>
+    <div class="d-flex flex-row">
+      <div class="btn">
+        <button type="submit" class="btn btn-primary">Inscription</button>
+      </div>
+      <div class="btn">
+        <button class="btn btn-danger" (click)="reinitialiser()">
+          Annuler
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<hr />
+<div class="container">
+  <p>Value: {{ form.value | json }}</p>
+  <p>Status: {{ form.status | json }}</p>
+</div>
