@@ -10,8 +10,8 @@
         placeholder="prénom nom"
       />
     </div>
-    <div *ngIf="erreursForm.name" class="error">
-        {{ erreursForm.name }}
+    <div *ngIf="erreursForm['name']" class="error">
+      {{ erreursForm['name'] }}
     </div>
     <div class="d-flex flex-column form-group">
       <label>Email</label>
@@ -22,8 +22,8 @@
         placeholder="adresse email"
       />
     </div>
-    <div *ngIf="erreursForm.email" class="error">
-        {{ erreursForm.email }}
+    <div *ngIf="erreursForm['email']" class="error">
+      {{ erreursForm['email'] }}
     </div>
     <div class="d-flex flex-column form-group">
       <label>Confirmation email</label>
@@ -34,11 +34,11 @@
         placeholder="confirmaton adresse email"
       />
     </div>
-    <div *ngIf="erreursForm.confirmEmail" class="error">
-        {{ erreursForm.confirmEmail }}
+    <div *ngIf="erreursForm['confirmEmail']" class="error">
+      {{ erreursForm['confirmEmail'] }}
     </div>
-    <div *ngIf="erreursForm.form" class="error">
-        {{ erreursForm.form }}
+    <div *ngIf="erreursForm['form']" class="error">
+      {{ erreursForm['form'] }}
     </div>
     <div class="d-flex flex-row">
       <div class="btn">
